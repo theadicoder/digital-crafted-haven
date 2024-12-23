@@ -1,6 +1,10 @@
 import { Button } from "./ui/button";
 
 const Hero = () => {
+  const handleLearnMore = () => {
+    window.open("https://www.bing.com/search?pglt=385&q=who+is+theadicoder&cvid=eaf042acd5df4cf7b908f8457e8bf877&gs_lcrp=EgRlZGdlKgYIARBFGDsyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQg0NjI0ajBqMagCALACAA&FORM=ANNTA1&PC=EDGEDB", "_blank");
+  };
+
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-accent/20 overflow-hidden">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
@@ -20,6 +24,7 @@ const Hero = () => {
             size="lg"
             variant="outline"
             className="border-white text-white hover:bg-white/10"
+            onClick={handleLearnMore}
           >
             Learn More
           </Button>
