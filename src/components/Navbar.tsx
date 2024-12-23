@@ -9,7 +9,7 @@ const Navbar = () => {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
+    { name: "Portfolio", href: "https://theadi.netlify.app/" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -28,6 +28,8 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="text-secondary hover:text-accent transition-colors"
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
                 {item.name}
               </a>
@@ -59,6 +61,8 @@ const Navbar = () => {
                 href={item.href}
                 className="block px-3 py-2 text-secondary hover:text-accent transition-colors"
                 onClick={() => setIsOpen(false)}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
                 {item.name}
               </a>
