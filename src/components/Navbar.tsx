@@ -7,11 +7,15 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "https://theadi.netlify.app/" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "https://theadi.netlify.app/" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const handleGetStarted = () => {
+    window.open("https://wa.me/918800464089", "_blank");
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b">
@@ -34,7 +38,7 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button>Get Started</Button>
+            <Button onClick={handleGetStarted}>Get Started</Button>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -68,7 +72,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full" onClick={handleGetStarted}>Get Started</Button>
             </div>
           </div>
         </div>
